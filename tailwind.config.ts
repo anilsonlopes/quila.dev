@@ -1,7 +1,5 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
-export default <Partial<Config>> {
-  content: [
-    'pages/**/*.vue'
-  ]
-}
+export default <Partial<Config>>{
+  content: ["pages/**/*.vue"],
+};
