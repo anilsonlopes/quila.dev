@@ -5,9 +5,15 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: {
-        default: 'hc_light',
-        dark: 'one-dark-pro',
-      }
-    }
-  }
+        default: "hc_light",
+        dark: "one-dark-pro",
+      },
+    },
+  },
+  plugins: [
+    {
+      src: "~/plugins/vercel.ts",
+      mode: "client",
+    },
+  ],
 });
