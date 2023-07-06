@@ -33,6 +33,7 @@ Desenvolvedor, seja você backend, frontend, mobile, dba, etc. Você é o respon
 **Módulo 2 - Objetivação**
 
 - [Não seja estúpido](/como-ser-um-programador-melhor/nao-seja-estupido)
+- [Evite o piloto automático](/como-ser-um-programador-melhor/evite-o-piloto-automatico)
 
 **Módulo 3 - Motivação**
 
