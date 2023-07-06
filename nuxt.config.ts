@@ -10,10 +10,4 @@ export default defineNuxtConfig({
       },
     },
   },
-  plugins: [
-    {
-      src: "~/plugins/vercel.ts",
-      mode: "client",
-    },
-  ],
 });
