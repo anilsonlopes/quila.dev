@@ -17,5 +17,7 @@
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "nuxt-gtag": "^0.5.7"
+  }
 }

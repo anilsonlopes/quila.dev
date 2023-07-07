@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxthq/ui", "@nuxt/content"],
+  modules: ["@nuxthq/ui", "@nuxt/content", "nuxt-gtag"],
   devtools: { enabled: true },
   content: {
     highlight: {
@@ -9,5 +9,8 @@ export default defineNuxtConfig({
         dark: "one-dark-pro",
       },
     },
+  },
+  gtag: {
+    id: "G-V8GX23DB8H",
   },
 });
