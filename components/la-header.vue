@@ -63,7 +63,7 @@ const mobileMenuOpen = ref(false);
           to="/"
           class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100"
         >
-          labfero
+          quila.dev
         </nuxt-link>
       </div>
     </nav>
@@ -78,7 +78,7 @@ const mobileMenuOpen = ref(false);
       <div class="px-6 py-6">
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">labfero</span>
+            <span class="sr-only">quila.dev</span>
             <img
               class="h-8 w-auto"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -124,7 +124,7 @@ const mobileMenuOpen = ref(false);
                 to="/"
                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-800/30"
               >
-                labfero
+                quila.dev
               </nuxt-link>
             </div>
           </div>

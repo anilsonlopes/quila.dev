@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "quila.dev",
   "private": true,
   "scripts": {
     "build": "nuxt build",
