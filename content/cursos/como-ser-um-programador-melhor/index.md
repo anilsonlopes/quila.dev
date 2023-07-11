@@ -28,44 +28,44 @@ Desenvolvedor, seja você backend, frontend, mobile, dba, etc. Você é o respon
 
 **Módulo 1 - Preliminares**
 
-- [Importe-se com o código](/como-ser-um-programador-melhor/importar-se-com-o-codigo)
+- [Importe-se com o código](/como-ser-um-programador-melhor/preliminares/importar-se-com-o-codigo)
 
 **Módulo 2 - Objetivação**
 
-- [Não seja estúpido](/como-ser-um-programador-melhor/nao-seja-estupido)
-- [Evite o piloto automático](/como-ser-um-programador-melhor/evite-o-piloto-automatico)
+- [Não seja estúpido](/como-ser-um-programador-melhor/objetivacao/nao-seja-estupido)
+- [Evite o piloto automático](/como-ser-um-programador-melhor/objetivacao/evite-o-piloto-automatico)
 
 **Módulo 3 - Motivação**
 
-- 3.1. [Evitando a estagnação](/como-ser-um-programador-melhor/evitando-a-estagnacao)
-- 3.2 [Qual o desafio?](/como-ser-um-programador-melhor/qual-o-desafio)
-- 3.3 [Encontre a motivação](/como-ser-um-programador-melhor/encontre-a-motivacao)
-- 3.4 [Controlando a motivação](/como-ser-um-programador-melhor/controlando-a-motivacao)
+- 3.1. [Evitando a estagnação](/como-ser-um-programador-melhor/motivacao/evitando-a-estagnacao)
+- 3.2 [Qual o desafio?](/como-ser-um-programador-melhor/motivacao/qual-o-desafio)
+- 3.3 [Encontre a motivação](/como-ser-um-programador-melhor/motivacao/encontre-a-motivacao)
+- 3.4 [Controlando a motivação](/como-ser-um-programador-melhor/motivacao/controlando-a-motivacao)
 
 **Módulo 4 - Responsabilidade**
 
-- [Não se apresse](/como-ser-um-programador-melhor/nao-se-apresse)
+- [Não se apresse](/como-ser-um-programador-melhor/responsabilidade/nao-se-apresse)
 - [Extra: Efeito colateral](/posts/efeito-colateral)
 
 **Módulo 5 - Rotina**
 
-- [Bugs](/como-ser-um-programador-melhor/bugs)
+- [Bugs](/como-ser-um-programador-melhor/rotina/bugs)
 - Daily (doing)
 
 **Módulo 6 - Lidando com a complexidade**
 
-- [Lidando com a complexidade](/como-ser-um-programador-melhor/lidando-com-a-complexidade)
+- [Identificando com a complexidade](/como-ser-um-programador-melhor/lidando-com-a-complexidade/identificando-com-a-complexidade)
 - Comunicação (doing)
 - [Extra: Template orientado a dados](/posts/template-orientado-a-dados)
 
-**Módulo 7 - Convenções**
+**Módulo 7 - Equipe**
 
-- [Pessoas](/como-ser-um-programador-melhor/pessoas)
-- Alinhamento (doing)
+- [Pessoas](/como-ser-um-programador-melhor/equipe/pessoas)
+- [Colaboração](/como-ser-um-programador-melhor/equipe/colaboracao)
 
-**Módulo 8 - À prova de futuro**
+**Módulo 8 - Futuro**
 
-- [Negócios](/como-ser-um-programador-melhor/negocios)
+- [Negócios](/como-ser-um-programador-melhor/futuro/negocios)
 - Identificando a visão da empresa (doing)
 - Como contribuir com a missão da empresa (doing)
 
