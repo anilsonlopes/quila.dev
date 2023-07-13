@@ -37,10 +37,10 @@ Desenvolvedor, seja você backend, frontend, mobile, dba, etc. Você é o respon
 
 **Módulo 3 - Motivação**
 
-- 3.1. [Evitando a estagnação](/como-ser-um-programador-melhor/motivacao/evitando-a-estagnacao)
-- 3.2 [Qual o desafio?](/como-ser-um-programador-melhor/motivacao/qual-o-desafio)
-- 3.3 [Encontre a motivação](/como-ser-um-programador-melhor/motivacao/encontre-a-motivacao)
-- 3.4 [Controlando a motivação](/como-ser-um-programador-melhor/motivacao/controlando-a-motivacao)
+- [Evitando a estagnação](/como-ser-um-programador-melhor/motivacao/evitando-a-estagnacao)
+- [Qual o desafio?](/como-ser-um-programador-melhor/motivacao/qual-o-desafio)
+- [Encontre a motivação](/como-ser-um-programador-melhor/motivacao/encontre-a-motivacao)
+- [Controlando a motivação](/como-ser-um-programador-melhor/motivacao/controlando-a-motivacao)
 
 **Módulo 4 - Responsabilidade**
 
@@ -50,13 +50,13 @@ Desenvolvedor, seja você backend, frontend, mobile, dba, etc. Você é o respon
 **Módulo 5 - Rotina**
 
 - [Bugs](/como-ser-um-programador-melhor/rotina/bugs)
-- Daily (doing)
+- Daily (fazendo)
 
 **Módulo 6 - Lidando com a complexidade**
 
-- [Identificando com a complexidade](/como-ser-um-programador-melhor/lidando-com-a-complexidade/identificando-com-a-complexidade)
-- Comunicação (doing)
-- [Extra: Template orientado a dados](/posts/template-orientado-a-dados)
+- [Identificando a complexidade](/como-ser-um-programador-melhor/lidando-a-complexidade/identificando-com-a-complexidade)
+- Comunicação (fazendo)
+- [Extra: Visualização orientado a dados](/posts/visualizacao-orientado-a-dados)
 
 **Módulo 7 - Equipe**
 
@@ -66,14 +66,14 @@ Desenvolvedor, seja você backend, frontend, mobile, dba, etc. Você é o respon
 **Módulo 8 - Futuro**
 
 - [Negócios](/como-ser-um-programador-melhor/futuro/negocios)
-- Identificando a visão da empresa (doing)
-- Como contribuir com a missão da empresa (doing)
+- Identificando a visão da empresa (fazendo)
+- Como contribuir com a missão da empresa (fazendo)
 
 ---
 
-# O acesso é vitalício?
+# Disponibilidadee
 
 Enquanto a internet existir e permitir que hospede coisas nela. O conteúdo extra você vai fazer download e salvar onde quiser.
 
 # Feedback
-Todos os dias, trabalhamos duro para manter nossa eficiência. Você já identificou informações desatualizadas? Está faltando alguma coisa? Por favor, compartilhe.
+Todos os dias, trabalhamos duro para manter nossa eficiência. Se você já identificou informações desatualizadas ou se está faltando alguma coisa, por favor, compartilhe.
