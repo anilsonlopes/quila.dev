@@ -54,7 +54,7 @@ Desenvolvedor, seja você backend, frontend, mobile, dba, etc. Você é o respon
 
 **Módulo 6 - Lidando com a complexidade**
 
-- [Identificando a complexidade](/como-ser-um-programador-melhor/lidando-a-complexidade/identificando-com-a-complexidade)
+- [Identificando a complexidade](/como-ser-um-programador-melhor/lidando-com-a-complexidade/identificando-a-complexidade)
 - Comunicação (fazendo)
 - [Extra: Visualização orientado a dados](/posts/visualizacao-orientado-a-dados)
 
