@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxthq/ui", "@nuxt/content", "nuxt-gtag"],
+  modules: ["@nuxthq/ui", "@nuxt/content", "nuxt-gtag", "nuxt-icon"],
   devtools: { enabled: true },
   content: {
     highlight: {
