@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="grid h-screen grid-cols-6 gap-2 p-2">
+  <div class="grid h-screen grid-cols-6 gap-2 p-2">
     <BubbleHowTo v-if="!exploreStore.expandedMode" />
     <BubbleJoin v-if="!exploreStore.expandedMode" />
     <BubbleAd v-if="!exploreStore.expandedMode" />

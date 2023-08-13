@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
+    "mapbox-gl": "^2.15.0",
     "nuxt-gtag": "^0.5.7",
     "pinia": "^2.1.6"
   }
