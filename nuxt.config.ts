@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "nuxt-gtag",
     "nuxt-icon",
     "@pinia/nuxt",
+    "@nuxtjs/tailwindcss",
   ],
   devtools: { enabled: true },
   gtag: {
