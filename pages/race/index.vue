@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="grid h-screen grid-cols-6 gap-2 p-2">
     <div
+      v-if="showingBubbles['how-to']"
       class="bubble relative col-span-3 flex items-end bg-cover bg-center p-5 md:col-span-3"
       style="
         background-image: url('https://images.unsplash.com/photo-1550684848-86a5d8727436?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
@@ -22,6 +23,7 @@
       </div>
     </div>
     <div
+      v-if="showingBubbles.join"
       class="bubble relative col-span-3 flex items-center bg-gradient-to-tr from-red-800 to-red-500 bg-cover px-10 py-5 md:col-span-3"
       style="
         background-image: url('https://images.unsplash.com/photo-1604076913837-52ab5629fba9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80');
@@ -38,13 +40,22 @@
       </div>
     </div>
     <div
+      v-if="showingBubbles.ad"
       class="bubble col-span-6 flex items-center justify-center bg-gray-100 text-gray-300"
     >
       <div>ad</div>
     </div>
     <div
-      class="bubble col-span-6 flex flex-col items-center justify-end bg-gradient-to-tr from-blue-900 to-blue-700 bg-cover px-8 py-5"
+      v-if="showingBubbles.explore"
+      class="bubble relative col-span-6 flex flex-col items-center justify-end bg-gradient-to-tr from-blue-900 to-blue-700 bg-cover px-8 py-5"
     >
+      <button
+        type="button"
+        class="absolute right-0 top-0 mr-5 mt-5"
+        @click="toggleExploreMode"
+      >
+        <Icon name="game-icons:expand" />
+      </button>
       <div
         class="mb-20 flex h-20 w-20 items-center justify-center rounded-full bg-red-600 text-5xl text-red-900"
       >
@@ -103,14 +114,47 @@ definePageMeta({
   layout: "race",
 });
 
-const achievements = [
-  {
-    title: "No limite",
-    description: "Passe entre dois radares no limite máximo de velocidade",
-  },
-  {
-    title: "Deslize total no pontal",
-    description: "Faça um drift em todo retorno do viaduto",
-  },
-];
+enum Bubble {
+  Anuncio = "ad",
+  ComoFunciona = "how-to",
+  Entrar = "join",
+  Explorar = "explore",
+}
+
+const showingBubbles = ref({
+  [Bubble.ComoFunciona]: true,
+  [Bubble.Anuncio]: true,
+  [Bubble.Entrar]: true,
+  [Bubble.Explorar]: true,
+});
+
+const exploreMode = ref(false);
+
+function toggleExploreMode() {
+  if (exploreMode.value) {
+    desactiveExploreMode();
+  } else {
+    activeExploreMode();
+  }
+
+  showingBubbles.value[Bubble.Explorar] = true;
+}
+
+function activeExploreMode() {
+  exploreMode.value = true;
+
+  showingBubbles.value[Bubble.Anuncio] = false;
+  showingBubbles.value[Bubble.ComoFunciona] = false;
+  showingBubbles.value[Bubble.Entrar] = false;
+  showingBubbles.value[Bubble.Explorar] = true;
+}
+
+function desactiveExploreMode() {
+  exploreMode.value = false;
+
+  showingBubbles.value[Bubble.Anuncio] = true;
+  showingBubbles.value[Bubble.ComoFunciona] = true;
+  showingBubbles.value[Bubble.Entrar] = true;
+  showingBubbles.value[Bubble.Explorar] = true;
+}
 </script>
