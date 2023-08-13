@@ -1,4 +1,7 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useExploreStore } from "@/stores/explore";
+const exploreStore = useExploreStore();
+</script>
 
 <template>
   <div
@@ -7,7 +10,7 @@
     <button
       type="button"
       class="absolute right-0 top-0 mr-5 mt-5"
-      @click="toggleExploreMode"
+      @click="exploreStore.toggleExpandedMode"
     >
       <Icon name="game-icons:expand" />
     </button>

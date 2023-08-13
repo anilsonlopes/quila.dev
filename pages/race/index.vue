@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="grid h-screen grid-cols-6 gap-2 p-2">
-    <BubbleHowTo v-if="showingBubbles[Bubble.ComoFunciona]" />
-    <BubbleJoin v-if="showingBubbles[Bubble.Entrar]" />
-    <BubbleAd v-if="showingBubbles[Bubble.Anuncio]" />
-    <BubbleExplore v-if="showingBubbles[Bubble.Explorar]" />
+    <BubbleHowTo v-if="!exploreStore.expandedMode" />
+    <BubbleJoin v-if="!exploreStore.expandedMode" />
+    <BubbleAd v-if="!exploreStore.expandedMode" />
+    <BubbleExplore />
   </div>
 </template>
 
@@ -30,51 +30,11 @@
 </style>
 
 <script lang="ts" setup>
+import { useExploreStore } from "@/stores/explore";
+
 definePageMeta({
   layout: "race",
 });
 
-enum Bubble {
-  Anuncio = "ad",
-  ComoFunciona = "how-to",
-  Entrar = "join",
-  Explorar = "explore",
-}
-
-const showingBubbles = ref({
-  [Bubble.ComoFunciona]: true,
-  [Bubble.Anuncio]: true,
-  [Bubble.Entrar]: true,
-  [Bubble.Explorar]: true,
-});
-
-const exploreMode = ref(false);
-
-function toggleExploreMode() {
-  if (exploreMode.value) {
-    desactiveExploreMode();
-  } else {
-    activeExploreMode();
-  }
-
-  showingBubbles.value[Bubble.Explorar] = true;
-}
-
-function activeExploreMode() {
-  exploreMode.value = true;
-
-  showingBubbles.value[Bubble.Anuncio] = false;
-  showingBubbles.value[Bubble.ComoFunciona] = false;
-  showingBubbles.value[Bubble.Entrar] = false;
-  showingBubbles.value[Bubble.Explorar] = true;
-}
-
-function desactiveExploreMode() {
-  exploreMode.value = false;
-
-  showingBubbles.value[Bubble.Anuncio] = true;
-  showingBubbles.value[Bubble.ComoFunciona] = true;
-  showingBubbles.value[Bubble.Entrar] = true;
-  showingBubbles.value[Bubble.Explorar] = true;
-}
+const exploreStore = useExploreStore();
 </script>
