@@ -22,7 +22,7 @@ definePageMeta({
                   {{ post.description }}
                 </div>
               </div>
-              <UIcon name="i-heroicons-chevron-right" class="text-black" />
+              <Icon name="i-heroicons-chevron-right" class="text-black" />
             </div>
           </nuxt-link>
         </li>
