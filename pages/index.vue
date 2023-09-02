@@ -1,18 +1,33 @@
 <template>
-  <div class="min-h-screen xl:grid xl:grid-cols-2 xl:gap-5">
-    <h1
-      class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl lg:mt-20 lg:text-6xl"
-    >
-      Acessível, escalável, autossustentável.
+  <div class="flex min-h-screen flex-col items-center justify-center">
+    <h1 class="text-4xl font-racing font-normal text-gray-900 sm:text-6xl lg:text-7xl">
+      Acessível, escalável & autossustentável.
     </h1>
-    <p
-      class="mt-5 text-lg leading-8 text-gray-600 dark:text-gray-300 lg:text-2xl lg:font-thin xl:mt-20"
-    >
-      É comum terem dificuldade em manter esses três pilares alinhado, mas
-      mantendo a intensão, tudo estará bem.
-    </p>
-    <div
-      class="mt-10 h-48 w-full rounded-2xl bg-zinc-200 xl:col-span-2 xl:h-96"
-    ></div>
+    <ContentQuery path="/posts">
+      <template #default="{ data }">
+        <ul class="mt-20 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <li v-for="post of data" :key="post.name">
+            <nuxt-link :to="post._path">
+              <div
+                class="rounded-lg bg-gray-100 p-5 transition-transform duration-500 ease-in-out -translate-y-4 hover:translate-y-0 hover:border-red-600"
+              >
+                <img class="w-full h-auto" loading="lazy" :src="post.image" :alt="post.name" />
+                <div class="w-full">
+                  <div class="text-lg font-semibold text-slate-700">
+                    {{ post.title }}
+                  </div>
+                  <div class="text-slate-600">
+                    {{ post.description }}
+                  </div>
+                </div>
+              </div>
+            </nuxt-link>
+          </li>
+        </ul>
+      </template>
+      <template #not-found>
+        <p>Nenhum post encontrado.</p>
+      </template>
+    </ContentQuery>
   </div>
 </template>

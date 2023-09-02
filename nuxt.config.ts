@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
+    "@nuxtjs/google-fonts",
   ],
   devtools: { enabled: true },
   gtag: {
@@ -14,5 +15,14 @@ export default defineNuxtConfig({
   },
   pinia: {
     autoImports: ["defineStore"],
+  },
+  googleFonts: {
+    families: {
+      "Racing Sans One": [400],
+    },
+    base64: true,
+    download: true,
+    inject: true,
+    text: "Acessível, escalável & autossustentável.",
   },
 });

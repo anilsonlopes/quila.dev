@@ -1,8 +1,12 @@
+<script lang="ts" setup>
+defineEmits(["toggle-menu"]);
+</script>
+
 <template>
   <div class="flex-1">
     <nuxt-link
       to="/"
-      class="rounded-xl p-1 text-2xl font-semibold leading-none text-gray-900 dark:text-gray-100"
+      class="rounded-xl p-1 text-2xl font-bold leading-none text-gray-900"
     >
       quila.dev
     </nuxt-link>
