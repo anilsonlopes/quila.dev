@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
+    "@hypernym/nuxt-anime"
   ],
   devtools: { enabled: true },
   gtag: {

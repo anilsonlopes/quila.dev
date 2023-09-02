@@ -575,6 +575,14 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@hypernym/nuxt-anime@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@hypernym/nuxt-anime/-/nuxt-anime-2.1.0.tgz#1210b112d2a1c935e956cf130d2b8cfaf8d3f327"
+  integrity sha512-zT56CndBtVwPSLvlpQSN/s5qMTzwII8Yf4c2fi2ZvHuZbP45UtvcvsFnyqkCqv+WOo08jdGhNSpHC91/poLOtA==
+  dependencies:
+    "@types/animejs" "^3.1.7"
+    animejs "^3.2.1"
+
 "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
@@ -1364,6 +1372,11 @@
     "@tufjs/canonical-json" "2.0.0"
     minimatch "^9.0.3"
 
+"@types/animejs@^3.1.7":
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/@types/animejs/-/animejs-3.1.7.tgz#4d9b23fff04b52e755119625a6087e2bc024527a"
+  integrity sha512-kFSyjM+fLo3oE9noWEtUvF82ttN8fTrKohiEMIrSzEzEjnsCmtO0rBCUQBlSPEb2w8vfN+v4/Zo0tK21Bgmq4g==
+
 "@types/debug@^4.0.0":
   version "4.1.8"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.8.tgz#cef723a5d0a90990313faec2d1e22aee5eecb317"
@@ -1726,6 +1739,11 @@ ajv@^6.12.5:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
+
+animejs@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
+  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
 
 ansi-align@^3.0.1:
   version "3.0.1"

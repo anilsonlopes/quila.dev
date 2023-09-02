@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-defineEmits(["toggle-menu"]);
-</script>
-
 <template>
   <div class="flex-1">
     <nuxt-link
