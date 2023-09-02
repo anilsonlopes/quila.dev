@@ -13,7 +13,7 @@ const path = `/cursos/como-ser-um-programador-melhor/${slug}`;
 </script>
 
 <template>
-  <div class="prose dark:prose-invert">
+  <div class="prose">
     <content-doc :path="path" />
   </div>
 </template>

@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="prose dark:prose-invert">
+  <div class="prose">
     <content-doc path="/cursos/como-ser-um-programador-melhor" />
   </div>
 </template>
