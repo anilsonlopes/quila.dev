@@ -10,10 +10,10 @@ definePageMeta({
       <ul class="space-y-10 py-20">
         <li v-for="post of data">
           <div
-            class="rounded-lg flex items-center bg-gray-100 px-10 py-10"
+            class="rounded-lg md:flex items-center bg-gray-100 px-10 py-10"
           >
             <img class="w-auto h-40" loading="lazy" :src="post.image" :alt="post.name" />
-            <div class="w-full pl-10">
+            <div class="w-full pt-5 mg:pt-0">
               <div class="text-2xl font-semibold text-slate-600">
                 {{ post.title }}
               </div>
