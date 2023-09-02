@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+useHead({
+  title: 'Acessível, escalável e autossustentável'
+})
+</script>
+
 <template>
   <div class="flex min-h-screen flex-col items-center justify-center">
     <h1 class="text-4xl font-racing font-normal text-gray-900 sm:text-6xl lg:text-7xl">

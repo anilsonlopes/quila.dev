@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'quila',
+    }
+  },
   modules: [
     "@nuxt/content",
     "nuxt-gtag",
@@ -10,9 +15,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   gtag: {
     id: "G-V8GX23DB8H",
-  },
-  pinia: {
-    autoImports: ["defineStore"],
   },
   googleFonts: {
     families: {
