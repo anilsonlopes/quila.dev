@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="prose dark:prose-invert">
+  <div class="prose">
     <content-doc :path="`/posts/${$route.params.slug}`" />
   </div>
 </template>

@@ -9,7 +9,7 @@ useHead({
     <h1 class="text-4xl font-racing font-normal text-gray-900 sm:text-6xl lg:text-7xl">
       Acessível, escalável & autossustentável.
     </h1>
-    <ContentQuery path="/posts">
+    <ContentQuery path="/posts" :limit="3">
       <template #default="{ data }">
         <ul class="mt-20 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           <li v-for="post of data" :key="post.name">
