@@ -19,9 +19,9 @@ const mobileMenuOpen = ref(false);
       class="mx-auto flex w-full max-w-6xl items-center justify-between p-6 md:px-8"
       aria-label="Global"
     >
-      <div class="flex">
-        <button type="button" @click="mobileMenuOpen = !mobileMenuOpen">
-          <Icon name="solar:hamburger-menu-linear" class="text-gray-700 text-2xl" />
+      <div class="flex w-full md:w-auto justify-between">
+        <button type="button" class="md:hidden" @click="mobileMenuOpen = !mobileMenuOpen">
+          <Icon name="solar:hamburger-menu-linear" class="text-gray-700 text-2xl " />
         </button>
         <la-quila />
       </div>
