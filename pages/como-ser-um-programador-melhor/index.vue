@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="prose">
+  <div class="prose pb-10">
     <content-doc path="/cursos/como-ser-um-programador-melhor" />
   </div>
 </template>
