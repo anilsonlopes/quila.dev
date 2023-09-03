@@ -3,7 +3,11 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'quila',
-    }
+    },
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in',
+    },
   },
   modules: [
     "@nuxt/content",
