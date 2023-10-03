@@ -13,7 +13,7 @@
           </div>
           <div class="col-span-8 grid gap-3">
             <div class="border p-3 bg-black rounded-lg text-gray-100 text-lg">
-              {{ marquee }}
+              {{ state.marquee }}
             </div>
             <div class="border p-1 bg-black rounded-lg grid grid-cols-12 gap-1">
               <button
