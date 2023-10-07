@@ -1,10 +1,14 @@
 <template>
   <div class="grid h-screen grid-rows-2">
-    <div class="bg-red-700"></div>
+    <div class="flex items-end justify-center bg-red-700 p-4">
+      <div class="border-b-4 border-black w-full max-w-4xl">
+        <GamePlayerSkeleton animation="idle" />
+      </div>
+    </div>
     <div class="bg-red-500 p-4">
-      <div class="grid grid-cols-10 gap-3">
+      <div class="grid grid-cols-10 gap-3 max-w-5xl mx-auto">
         <div
-          class="col-span-3 grid gap-3 rounded border border-black bg-gray-200 p-3"
+          class="col-span-3 grid gap-3 rounded-lg border border-black bg-gray-200 p-3"
           :style="{ boxShadow: '4px 5px 0 black' }"
         >
           <GameUiMenuButton
@@ -17,19 +21,19 @@
         </div>
         <div class="col-span-7 grid gap-3">
           <div
-            class="rounded border border-black bg-gray-200 p-3 text-lg text-gray-700"
+            class="rounded-lg border border-black bg-gray-200 p-3 text-lg text-gray-700"
             :style="{ boxShadow: '4px 5px 0 black' }"
           >
             {{ state.marquee }}
           </div>
           <div
-            class="grid grid-cols-6 gap-1 rounded border border-black bg-gray-200 p-1"
+            class="grid grid-cols-6 gap-1 rounded-lg border border-black bg-gray-200 p-1"
             :style="{ boxShadow: '4px 5px 0 black' }"
           >
             <GameUiItemsButton v-for="item in state.items" v-bind="item" />
           </div>
           <div
-            class="flex max-w-xl items-center space-x-3 rounded border border-black bg-gray-200 p-3"
+            class="flex max-w-xl items-center space-x-3 rounded-lg border border-black bg-gray-200 p-3"
             :style="{ boxShadow: '4px 5px 0 black' }"
           >
             <div
@@ -43,7 +47,7 @@
                 {{ state.stats.name }}
               </div>
               <div
-                class="mt-1 flex h-3 items-center rounded border border-black bg-red-100 px-px"
+                class="mt-1 flex h-3 items-center rounded-md border border-black bg-red-100 px-px"
               >
                 <div
                   class="h-2 rounded bg-red-500"

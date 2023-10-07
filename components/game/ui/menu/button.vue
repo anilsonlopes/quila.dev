@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <button
-    class="rounded border border-black bg-yellow-400 py-2 font-semibold text-gray-900"
+    class="rounded-lg border border-black bg-yellow-400 py-2 font-semibold text-gray-900"
     :style="{ boxShadow: '1px 1px 0 black' }"
     :class="{
       'cursor-not-allowed opacity-60': disabled,
