@@ -1,50 +1,63 @@
 <template>
-  <div class="grid h-screen grid-rows-4">
-    <div class="row-span-3 bg-gray-200 p-4">
-      <div class="board">
+  <div class="flex h-screen flex-col">
+    <la-header />
+    <div class="board">
+      <div
+        v-for="(step, stepIndex) in steps"
+        class="board-step flex flex-col items-center justify-center bg-gray-500"
+        :class="`board-step--${stepIndex}`"
+      >
         <div
-          v-for="(step, stepIndex) in steps"
-          class="board-step flex flex-col items-center justify-center bg-gray-400"
-          :class="`board-step--${stepIndex}`"
+          class="py-2 text-center font-racing text-xl font-semibold text-white"
         >
-          <div
-            class="py-2 text-center font-racing text-xl font-semibold text-white"
-          >
-            {{ stepIndex }}
-          </div>
-          <div class="flex -space-x-2">
-            <div v-for="player in step.players" class="flex-shrink-0">
-              <img
-                :src="avatars[player]"
-                class="h-8 w-8 rounded-full ring-2 ring-black"
-              />
-            </div>
+          {{ stepIndex }}
+        </div>
+        <div class="flex -space-x-2">
+          <div v-for="player in step.players" class="flex-shrink-0">
+            <img
+              :src="avatars[player]"
+              class="h-8 w-8 rounded-full ring-2 ring-black"
+            />
           </div>
         </div>
-        <div
-          class="board-step board-step--end flex flex-col items-center justify-center bg-gray-400"
-        >
+      </div>
+      <div
+        class="board-step board-step--end flex flex-col items-center justify-center space-y-3 bg-gray-400"
+      >
+        <div>
           <div v-for="icon in diceIcons">
             <Icon
               v-show="icon === diceIcons[currentDice]"
               :name="icon"
               class="text-7xl text-gray-900"
+              :class="{
+                'pointer-events-none animate-pulse': randomizing,
+                'pointer-events-none text-red-500': haveQuestion,
+              }"
+              @click="requestQuestion"
             />
           </div>
         </div>
-      </div>
-    </div>
-    <div class="grid grid-cols-10 grid-rows-3 gap-4 bg-red-500 p-4 text-white">
-      <div class="col-span-7 pt-3 text-xl">Anilson Lopes</div>
-      <div class="col-span-7">
-        <button
-          v-show="!randomizing"
-          type="button"
-          @click="onClickRandomizeDice"
-        >
-          Jogar dados
-        </button>
-        <div v-show="randomizing">Jogando dados...</div>
+        <div v-show="haveQuestion" class="px-10 space-y-3">
+          <div class="rounded bg-red-500 px-2 py-1 text-xs text-white inline-block capitalize">
+            {{ currentQuestion.tema }}
+          </div>
+          <div class="text-xl text-gray-800">
+            {{ currentQuestion.pergunta }}
+          </div>
+          <ul class="list-inside list-decimal space-y-1 text-gray-700">
+            <li
+              v-for="(
+                alternative, alternativeIndex
+              ) in currentQuestion.alternativas"
+              role="button"
+              class="hover:text-black"
+              @click="selectAlternative(alternativeIndex)"
+            >
+              {{ alternative }}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -52,7 +65,7 @@
 
 <style scoped lang="postcss">
 .board {
-  @apply grid h-full grid-cols-5 grid-rows-6 gap-1;
+  @apply grid h-full grid-cols-5 grid-rows-6 gap-1 bg-gray-400 p-10;
 }
 
 .board-step--0 {
@@ -192,6 +205,8 @@
 </style>
 
 <script lang="ts" setup>
+import { QuestionResponse } from "~/server/api/gpt";
+
 definePageMeta({
   layout: "game",
 });
@@ -209,7 +224,7 @@ const avatars = [
 const steps = ref([
   {
     id: 1,
-    players: [1],
+    players: [1, 0, 2],
   },
   {
     id: 2,
@@ -221,7 +236,7 @@ const steps = ref([
   },
   {
     id: 4,
-    players: [0],
+    players: [],
   },
   {
     id: 5,
@@ -233,7 +248,7 @@ const steps = ref([
   },
   {
     id: 7,
-    players: [2],
+    players: [],
   },
   {
     id: 8,
@@ -291,31 +306,36 @@ const diceIcons = [
   "game-icons:inverted-dice-6",
 ];
 
-const templateMessage =
-  "Crie uma pergunta no tema {themeName} com {alternativeCount} alternativas";
+const currentDice = ref(0);
+const randomizing = ref(false);
+const loading = ref(false);
 
-function renderTemplateMessage(message: string, props: Record<string, any>) {
-  for (const [key, value] of Object.entries(props)) {
-    message = message.replace(`{${key}}`, value);
-  }
-  return message;
+const currentQuestion = ref<QuestionResponse>({
+  tema: "",
+  pergunta: "",
+  alternativas: [],
+  resposta_correta: 0,
+});
+
+async function requestQuestion() {
+  loading.value = true
+
+  randomizeDice();
+  
+  const r = await useFetch("/api/gpt", { params: { tema: "filme" } });
+  currentQuestion.value = JSON.parse(String(r.data.value));
+
+  loading.value = false
 }
 
-const currentDice = ref(0);
-const countRandomizeDice = ref(0);
-const randomizing = ref(false);
-
-async function randomizeDice() {
+function randomizeDice() {
   randomizing.value = true;
   currentDice.value = Math.floor(Math.random() * 6) + 1;
-  if (countRandomizeDice.value > 20) {
-    randomizing.value = false;
-    // fazer a pergunta
-    // avançar apenas se acertar
-    gotoNextStep();
-  } else {
-    countRandomizeDice.value++;
+
+  if (loading.value) {
     setTimeout(randomizeDice, 100);
+  } else {
+    randomizing.value = false;
   }
 }
 
@@ -333,15 +353,45 @@ function gotoNextStep() {
   // adiciona player no novo step
   let nextStepIndex = currentStepIndex + currentDice.value;
 
-  if (nextStepIndex >= steps.value.length) {
-    nextStepIndex = nextStepIndex - steps.value.length;
+  if (nextStepIndex > steps.value.length) {
+    nextStepIndex = steps.value.length;
   }
 
   steps.value[nextStepIndex].players.push(0);
 }
 
-function onClickRandomizeDice() {
-  countRandomizeDice.value = 0;
-  randomizeDice();
+function gotoPreviousStep() {
+  // busca step onde está o player
+  const currentStepIndex = steps.value.findIndex((step) =>
+    step.players.includes(0),
+  )!;
+
+  // remove player do step atual
+  steps.value[currentStepIndex].players = steps.value[
+    currentStepIndex
+  ].players.filter((player) => player !== 0);
+
+  // adiciona player no novo step
+  let previousStepIndex = currentStepIndex - currentDice.value;
+
+  if (previousStepIndex < 0) {
+    previousStepIndex = 0;
+  }
+
+  steps.value[previousStepIndex].players.push(0);
 }
+
+function selectAlternative(alternativeIndex: number) {
+  currentQuestion.value.pergunta = "";
+
+  if (alternativeIndex === currentQuestion.value.resposta_correta) {
+    gotoNextStep();
+  } else {
+    gotoPreviousStep();
+  }
+}
+
+const haveQuestion = computed(() => {
+  return currentQuestion.value.pergunta !== "";
+});
 </script>
