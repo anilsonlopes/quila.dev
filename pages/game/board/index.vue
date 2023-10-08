@@ -24,7 +24,7 @@
       <div
         class="board-step board-step--end flex flex-col items-center justify-center space-y-3 bg-gray-400"
       >
-        <div>
+        <div v-show="!haveQuestion">
           <div v-for="icon in diceIcons">
             <Icon
               v-show="icon === diceIcons[currentDice]"
@@ -51,7 +51,7 @@
                 alternative, alternativeIndex
               ) in currentQuestion.alternativas"
               role="button"
-              class="hover:text-black"
+              class="bg-gray-100 p-2 rounded hover:bg-gray-200"
               @click="selectAlternative(alternativeIndex)"
             >
               {{ alternative }}
@@ -322,7 +322,7 @@ async function requestQuestion() {
 
   randomizeDice();
   
-  const r = await useFetch("/api/gpt", { params: { tema: "filme" } });
+  const r = await useFetch("/api/gpt", { params: { tema: "filme", nivel: '1' } });
   currentQuestion.value = JSON.parse(String(r.data.value));
 
   loading.value = false

@@ -12,19 +12,27 @@ export type QuestionResponse = {
 };
 
 export default defineEventHandler(async (event) => {
-  const query: { tema: string } = getQuery(event);
+  const query: { tema: string; nivel: string } = getQuery(event);
 
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
     messages: [
       {
-        role: "assistant",
+        role: "system",
+        content: "Você é Board, um jogo de tabuleiro com desafios.",
+      },
+      {
+        role: "system",
         content:
-          "Quando o usuário solicitar um novo desafio, elabore um objeto JSON com uma pergunta, apenas 3 alternativas de resposta sem prefixo. O tema será especificado na solicitação. Inclua no JSON a resposta correta usando o index da alternativa e o tema solicitado.",
+          "Você receberá um tema e um nível de dificuldade de 1 à 3. Então você fornecerá um JSON no seguinte formato: { tema: string, pergunta: string, alternativas: string[], resposta_correta: number }",
       },
       {
         role: "user",
-        content: `Novo desafio no tema: ${query.tema}`,
+        content: `Novo desafio no tema: ${query.tema} e nível de dificuldade: ${query.nivel}}`,
+      },
+      {
+        role: "system",
+        content: "Lembre-se de não utilizar prefixo nas alternativas. A resposta correta deve corresponder ao index da alternativa correta.",
       },
     ],
     temperature: 1,
