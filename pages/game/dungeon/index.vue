@@ -64,7 +64,7 @@
 
 <script lang="ts" setup>
 definePageMeta({
-  layout: "mmo",
+  layout: "game",
 });
 
 useHead({

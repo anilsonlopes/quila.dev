@@ -2,11 +2,11 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'quila',
+      title: "quila",
     },
     pageTransition: {
-      name: 'page',
-      mode: 'out-in',
+      name: "page",
+      mode: "out-in",
     },
   },
   modules: [
@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
-    "@hypernym/nuxt-anime"
+    "@hypernym/nuxt-anime",
   ],
   devtools: { enabled: true },
   gtag: {
