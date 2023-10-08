@@ -322,7 +322,7 @@ async function requestQuestion() {
 
   randomizeDice();
   
-  const r = await useFetch("/api/gpt", { params: { tema: "filme", nivel: '1' } });
+  const r = await useFetch("/api/gpt", { params: { tema: "filme", nivel: '3' } });
   currentQuestion.value = JSON.parse(String(r.data.value));
 
   loading.value = false

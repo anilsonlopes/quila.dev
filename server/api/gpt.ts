@@ -27,12 +27,13 @@ export default defineEventHandler(async (event) => {
           "Você receberá um tema e um nível de dificuldade de 1 à 3. Então você fornecerá um JSON no seguinte formato: { tema: string, pergunta: string, alternativas: string[], resposta_correta: number }",
       },
       {
-        role: "user",
-        content: `Novo desafio no tema: ${query.tema} e nível de dificuldade: ${query.nivel}}`,
+        role: "system",
+        content:
+          "Não utilizar prefixo nas alternativas. A resposta correta deve corresponder ao index da alternativa correta.",
       },
       {
-        role: "system",
-        content: "Lembre-se de não utilizar prefixo nas alternativas. A resposta correta deve corresponder ao index da alternativa correta.",
+        role: "user",
+        content: `Novo desafio no tema: ${query.tema} e nível de dificuldade: ${query.nivel}}`,
       },
     ],
     temperature: 1,
