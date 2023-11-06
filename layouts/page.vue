@@ -6,5 +6,6 @@
         <slot />
       </div>
     </div>
+    <la-cta-newsletter />
   </div>
 </template>

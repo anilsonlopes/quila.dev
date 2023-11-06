@@ -28,6 +28,5 @@ export default defineNuxtConfig({
     base64: true,
     download: true,
     inject: true,
-    text: "Acessível, escalável & autossustentável.",
   },
 });
