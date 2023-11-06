@@ -33,7 +33,7 @@ const close = () => {
         </div>
         <nuxt-link
           class="rounded bg-blue-600 px-5 py-2 text-white"
-          :to="{ name: 'newsletter' }"
+          :to="{ name: 'news' }"
           @click="close"
         >
           Inscrever-se
