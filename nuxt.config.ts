@@ -29,4 +29,7 @@ export default defineNuxtConfig({
     download: true,
     inject: true,
   },
+  runtimeConfig: {
+    supabaseKey: process.env.SUPABASE_KEY,
+  },
 });
