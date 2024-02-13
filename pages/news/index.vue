@@ -7,17 +7,23 @@ const userInput = ref({
   email: "",
 });
 
+const loading = ref(false);
+
+
 const submitForm = async () => {
+  loading.value = true
   const { data, error } = await useFetch("/api/news", {
     method: "POST",
     body: userInput.value,
   });
+  loading.value = false
   if (error) {
-    console.log(error)
+    alert(error.value?.statusMessage)
   } else {
-    console.log(data);
+    alert(data.value?.message);
   }
 };
+
 </script>
 
 <template>
@@ -44,6 +50,7 @@ const submitForm = async () => {
           placeholder="Endereço eletrônico"
           class="w-full rounded border px-3 py-1 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600"
           autocomplete="email"
+          required
         />
         <div class="mt-10 text-center">
           <div class="text-sm text-gray-500">
@@ -53,8 +60,10 @@ const submitForm = async () => {
           <button
             type="submit"
             class="mt-10 whitespace-nowrap rounded bg-blue-600 px-7 py-3 text-white"
+            :class="{ 'opacity-50 pointer-events-none': loading }"
           >
-            Inscrever-se
+            <span v-show="!loading">Inscrever-se</span>
+            <Icon name="fluent:spinner-ios-20-filled" class="animate-spin text-xl" v-show="loading" />
           </button>
         </div>
       </form>
