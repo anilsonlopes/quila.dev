@@ -17,7 +17,7 @@ const submitForm = async () => {
     body: userInput.value,
   });
   loading.value = false
-  if (error) {
+  if (error.value) {
     alert(error.value?.statusMessage)
   } else {
     alert(data.value?.message);
