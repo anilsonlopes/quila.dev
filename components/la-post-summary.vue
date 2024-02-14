@@ -1,24 +1,17 @@
 <template>
   <div>
-    <nuxt-link :to="post._path">
+    <nuxt-link :to="post._path" :class="{ 'md:flex md:space-x-3': highlight }">
       <img
-        class="block"
+        class="block h-48 w-auto"
         loading="lazy"
         :src="post.image"
         :alt="post.name"
-        :class="{ 'w-auto h-full': highlight, 'w-auto h-48': !highlight }"
       />
       <div class="w-full">
-        <h2
-          class="font-semibold text-slate-700"
-          :class="{ 'md:text-3xl': highlight, 'md:text-lg': !highlight }"
-        >
+        <h2 class="font-semibold text-slate-700 md:text-lg">
           {{ post.title }}
         </h2>
-        <h4
-          class="text-sm text-slate-600 md:mt-2"
-          :class="{ 'md:text-lg ': highlight }"
-        >
+        <h4 class="text-sm text-slate-600 md:mt-2">
           {{ post.description }}
         </h4>
       </div>

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import type { QueryBuilder } from "@nuxt/content/dist/runtime/types";
+import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
 
 useHead({
   title: "Acessível, escalável e autossustentável",
 });
 
-const query: QueryBuilder = {
+const query: QueryBuilderParams = {
   path: "/posts",
   sort: [{ _id: -1 }],
 };
@@ -23,14 +23,14 @@ const query: QueryBuilder = {
     <ContentList :query="query">
       <template #default="{ list }">
         <ul
-          class="mt-8 grid max-w-4xl grid-cols-2 grid-rows-2 gap-1 sm:grid-cols-3"
+          class="mt-8 grid grid-cols-2 grid-rows-2 gap-1 sm:grid-cols-3 items-start 2xl:grid-cols-4"
         >
           <li
             v-for="(post, postIndex) in list"
             :key="post.name"
             class="rounded p-4"
             :class="{
-              'col-span-2 row-span-2 border border-white bg-gradient-to-t from-gray-300 to-slate-200':
+              'col-span-2 row-span-2 md:row-span-3 border border-white bg-gradient-to-t from-gray-300 to-slate-200':
                 postIndex === 0,
               'bg-gray-100': postIndex > 0,
             }"
