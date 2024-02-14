@@ -2,28 +2,37 @@
 import { ref } from "vue";
 
 const navigation = [
-  { name: "Página inicial", href: "/" },
   {
     name: "Como ser um programador melhor",
     href: "/como-ser-um-programador-melhor",
   },
   { name: "Posts", href: "/posts" },
+  { name: "Newsletter", href: "/news" },
 ];
 
 const mobileMenuOpen = ref(false);
 </script>
 
 <template>
-  <header class="bg-gray-300 z-10">
+  <header class="bg-gray-300">
     <nav
       class="mx-auto flex w-full max-w-6xl items-center justify-between p-6 md:px-8"
       aria-label="Global"
     >
-      <div class="flex w-full md:w-auto justify-between">
-        <button type="button" class="md:hidden" @click="mobileMenuOpen = !mobileMenuOpen">
-          <Icon name="solar:hamburger-menu-linear" class="text-gray-700 text-2xl " />
+      <div class="flex w-full justify-between md:w-auto">
+        <button
+          type="button"
+          class="md:hidden"
+          @click="mobileMenuOpen = !mobileMenuOpen"
+        >
+          <Icon
+            name="solar:hamburger-menu-linear"
+            class="text-2xl text-gray-700"
+          />
         </button>
-        <la-quila />
+        <nuxt-link to="/">
+          <la-quila />
+        </nuxt-link>
       </div>
       <div class="mt-5 hidden md:mt-0 md:flex md:gap-x-12">
         <nuxt-link
@@ -40,17 +49,22 @@ const mobileMenuOpen = ref(false);
       </div>
     </nav>
     <Transition name="link">
-      <div v-show="mobileMenuOpen" class="transform transition-transform z-10 absolute w-full bg-gray-100 border-t border-gray-400 md:hidden">
+      <div
+        v-show="mobileMenuOpen"
+        class="absolute z-10 w-full transform bg-gray-100 transition-transform md:hidden shadow-2xl"
+      >
         <nuxt-link
           v-for="link in navigation"
           :key="link.href"
           :to="link.href"
-          class="link py-2 px-5 flex items-center space-x-3 text-sm font-semibold leading-6 text-slate-700 hover:bg-gray-900 hover:text-white"
+          class="link flex items-center space-x-3 px-5 py-2 text-sm font-semibold leading-6 text-slate-700 hover:bg-blue-600 hover:text-white"
         >
-          <Icon name="solar:arrow-right-bold-duotone" class="text-red-600 link-icon" />
+          <Icon
+            name="solar:emoji-funny-circle-outline"
+            class="link-icon text-red-600 text-xl"
+          />
           <span>
-          {{ link.name }}
-
+            {{ link.name }}
           </span>
         </nuxt-link>
       </div>

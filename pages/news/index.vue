@@ -11,6 +11,11 @@ const loading = ref(false);
 
 
 const submitForm = async () => {
+  if (!userInput.value.email) {
+    alert("Por favor, preencha o campo de email.");
+    return;
+  }
+
   loading.value = true
   const { data, error } = await useFetch("/api/news", {
     method: "POST",
