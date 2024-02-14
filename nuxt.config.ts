@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   gtag: {
-    id: "G-V8GX23DB8H",
+    id: "G-N4V4MBDWX9",
   },
   googleFonts: {
     families: {
