@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { onClickOutside } from '@vueuse/core'
 
 const navigation = [
   {
@@ -11,6 +11,11 @@ const navigation = [
 ];
 
 const mobileMenuOpen = ref(false);
+const mobileMenuElement = ref(null);
+
+onClickOutside(mobileMenuElement, () => {
+  mobileMenuOpen.value = false;
+})
 </script>
 
 <template>
@@ -51,7 +56,8 @@ const mobileMenuOpen = ref(false);
     <Transition name="link">
       <div
         v-show="mobileMenuOpen"
-        class="absolute z-10 w-full transform bg-gray-100 transition-transform md:hidden shadow-2xl"
+        class="absolute z-10 w-full transform bg-gray-100 shadow-2xl transition-transform md:hidden"
+        ref="mobileMenuElement"
       >
         <nuxt-link
           v-for="link in navigation"
@@ -61,7 +67,7 @@ const mobileMenuOpen = ref(false);
         >
           <Icon
             name="solar:emoji-funny-circle-outline"
-            class="link-icon text-red-600 text-xl"
+            class="link-icon text-xl text-red-600"
           />
           <span>
             {{ link.name }}

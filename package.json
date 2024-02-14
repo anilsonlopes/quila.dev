@@ -23,6 +23,8 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.3",
+    "@vueuse/core": "^10.7.2",
+    "@vueuse/nuxt": "^10.7.2",
     "nuxt-gtag": "0.6.2",
     "openai": "^4.11.1",
     "postcss-custom-properties": "^13.3.0"

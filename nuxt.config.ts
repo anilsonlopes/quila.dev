@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "@hypernym/nuxt-anime",
+    "@vueuse/nuxt",
   ],
   devtools: { enabled: true },
   gtag: {
