@@ -5,6 +5,5 @@
     <div class="mx-auto max-w-6xl px-6 lg:px-8">
       <slot />
     </div>
-    <la-cta-newsletter />
   </div>
 </template>
