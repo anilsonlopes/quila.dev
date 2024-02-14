@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
+import type { QueryBuilder } from "@nuxt/content/dist/runtime/types";
 
 useHead({
   title: "Acessível, escalável e autossustentável",
 });
 
-const query: QueryBuilderParams = {
+const query: QueryBuilder = {
   path: "/posts",
-  sort: [{ id: "desc" }],
+  sort: [{ _id: -1 }],
 };
 </script>
 
