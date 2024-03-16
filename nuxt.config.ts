@@ -33,4 +33,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     supabaseKey: process.env.SUPABASE_KEY,
   },
+  anime: {
+    composables: true,
+  }
 });
