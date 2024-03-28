@@ -3,6 +3,13 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "quila",
+      script: [
+        {
+          key: "pagesense",
+          src: "https://cdn.pagesense.io/js/quiladev/8450d6c23e7c41feabd472795fa3bc5d.js",
+          async: true,
+        },
+      ],
     },
     pageTransition: {
       name: "page",
@@ -35,5 +42,5 @@ export default defineNuxtConfig({
   },
   anime: {
     composables: true,
-  }
+  },
 });
