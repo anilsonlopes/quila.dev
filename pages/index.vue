@@ -5,6 +5,10 @@ useHead({
   title: "Acessível, escalável e autossustentável",
 });
 
+definePageMeta({
+  layout: "studio",
+});
+
 const query: QueryBuilderParams = {
   path: "/posts",
   sort: [{ _id: -1 }],
@@ -12,7 +16,10 @@ const query: QueryBuilderParams = {
 </script>
 
 <template>
-  <div class="flex min-h-screen flex-col">
-    opa
+  <div>
+    <la-header />
+    <StudioHeader />
+    <StudioSolutions />
+    <StudioProccess />
   </div>
 </template>
