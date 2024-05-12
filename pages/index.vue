@@ -9,59 +9,10 @@ const query: QueryBuilderParams = {
   path: "/posts",
   sort: [{ _id: -1 }],
 };
-
-onMounted(() => {
-  useAnime({
-    targets: "h1",
-    translateX: [-200, 0],
-    opacity: [0, 1],
-    duration: 2000,
-    easing: "easeOutExpo",
-  });
-
-  useAnime({
-    targets: "li",
-    opacity: [0, 1],
-    scaleY: [0.1, 1],
-    duration: 1000,
-    delay(element, index, length) {
-      return index * 100;
-    },
-  });
-});
 </script>
 
 <template>
   <div class="flex min-h-screen flex-col">
-    <h1
-      class="font-racing text-4xl font-normal text-gray-900 sm:text-6xl lg:text-7xl"
-    >
-      Acessível<span class="text-red-500">,</span> escalável
-      <span class="text-red-500">&</span> autossustentável
-      <span class="text-red-500">.</span>
-    </h1>
-    <ContentList :query="query">
-      <template #default="{ list }">
-        <ul
-          class="mt-8 grid grid-cols-2 grid-rows-2 items-start gap-1 sm:grid-cols-3 2xl:grid-cols-4"
-        >
-          <li
-            v-for="(post, postIndex) in list"
-            :key="post.name"
-            class="rounded p-4"
-            :class="{
-              'col-span-2 row-span-2 border border-white bg-gradient-to-t from-gray-300 to-slate-200 md:row-span-3':
-                postIndex === 0,
-              'bg-gray-100': postIndex > 0,
-            }"
-          >
-            <LaPostSummary :post="post" :highlight="postIndex === 0" />
-          </li>
-        </ul>
-      </template>
-      <template #not-found>
-        <p>Nenhum post encontrado.</p>
-      </template>
-    </ContentList>
+    opa
   </div>
 </template>
