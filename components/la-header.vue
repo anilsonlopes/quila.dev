@@ -7,7 +7,6 @@ const navigation = [
     href: "/como-ser-um-programador-melhor",
   },
   { name: "Posts", href: "/posts" },
-  { name: "Newsletter", href: "/news" },
 ];
 
 const mobileMenuOpen = ref(false);
