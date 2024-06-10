@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@hypernym/nuxt-anime",
     "@vueuse/nuxt",
+    "@nuxtjs/seo",
   ],
   devtools: { enabled: true },
   gtag: {
@@ -32,5 +33,11 @@ export default defineNuxtConfig({
   },
   anime: {
     composables: true,
+  },
+
+  site: {
+    url: "https://quila.dev",
+    name: "Quila",
+    description: "Acessível, escalável e autossustentável.",
   },
 });
