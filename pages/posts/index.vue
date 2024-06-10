@@ -6,10 +6,18 @@ definePageMeta({
 useSeoMeta({
   title: "Posts",
 });
+
+defineOgImage({
+  props: {
+    description: "Diretório de pesquisa, estudos e artigos do Quila.",
+  },
+});
 </script>
 
 <template>
   <div>
+    <h1 class="text-4xl font-bold">Posts</h1>
+    <h3 class="mt-1 text-lg text-gray-600">Diretório de publicações.</h3>
     <ContentQuery path="/posts" :limit="3">
       <template #default="{ data }">
         <ul class="space-y-10 py-20">

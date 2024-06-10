@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { SpeedInsights } from '@vercel/speed-insights/nuxt'
+import { SpeedInsights } from "@vercel/speed-insights/nuxt";
+defineOgImage();
 </script>
 
 <template>
@@ -8,7 +9,6 @@ import { SpeedInsights } from '@vercel/speed-insights/nuxt'
   </NuxtLayout>
   <SpeedInsights />
 </template>
-
 
 <style>
 .page-enter-active,

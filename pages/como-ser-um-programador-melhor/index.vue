@@ -1,6 +1,14 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: "page",  
+  layout: "page",
+});
+
+defineOgImage({
+  props: {
+    title: "Como ser um programador melhor",
+    description:
+      "Não é preciso ser Sherlock Holmes para descobrir que bons programadores escrevem bons códigos.",
+  },
 });
 </script>
 
