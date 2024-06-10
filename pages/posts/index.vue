@@ -29,11 +29,11 @@ useSeoMeta({
                 <div class="text-2xl font-semibold text-slate-600">
                   {{ post.title }}
                 </div>
-                <ContentDoc
-                  class="mt-3 max-w-lg"
-                  excerpt
-                  :path="post._path"
-                ></ContentDoc>
+                <div class="mt-3 max-w-lg">
+                  <ContentRenderer :value="post.excerpt">
+                    <ContentRendererMarkdown :value="post.excerpt" />
+                  </ContentRenderer>
+                </div>
                 <nuxt-link
                   class="mt-5 flex max-w-md justify-between rounded-lg border border-gray-200 bg-gradient-to-r from-white px-4 py-1 transition-colors duration-100 hover:to-white"
                   :to="post._path"
