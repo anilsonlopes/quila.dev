@@ -1,8 +1,4 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: "page",
-});
-
 defineOgImage({
   props: {
     title: "Como ser um programador melhor",

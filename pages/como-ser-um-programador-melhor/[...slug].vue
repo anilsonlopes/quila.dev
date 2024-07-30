@@ -1,8 +1,4 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: "page",
-});
-
 const route = useRoute();
 const slug =
   typeof route.params.slug === "string"

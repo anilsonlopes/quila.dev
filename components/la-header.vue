@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onClickOutside } from '@vueuse/core'
+import { onClickOutside } from "@vueuse/core";
 
 const navigation = [
   {
@@ -14,11 +14,11 @@ const mobileMenuElement = ref(null);
 
 onClickOutside(mobileMenuElement, () => {
   mobileMenuOpen.value = false;
-})
+});
 </script>
 
 <template>
-  <header class="bg-gray-300">
+  <header>
     <nav
       class="mx-auto flex w-full max-w-6xl items-center justify-between p-6 md:px-8"
       aria-label="Global"
@@ -43,7 +43,7 @@ onClickOutside(mobileMenuElement, () => {
           v-for="link in navigation"
           :key="link.href"
           :to="link.href"
-          class="group relative block text-sm font-semibold leading-6 text-slate-700 hover:text-slate-900"
+          class="group relative block text-sm font-semibold leading-6 text-slate-100 hover:text-slate-400"
         >
           {{ link.name }}
           <span
