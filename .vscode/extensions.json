@@ -5,6 +5,8 @@
     "dbaeumer.vscode-eslint",
     "cpylua.language-postcss",
     "esbenp.prettier-vscode",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "drcika.apc-extension",
+    "github.copilot"
   ]
 }
