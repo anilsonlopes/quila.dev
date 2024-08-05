@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       "Racing Sans One": [400],
+      Roboto: true
     },
     base64: true,
     download: true,
