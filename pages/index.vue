@@ -6,7 +6,7 @@ useHead({
 });
 
 const { data: posts } = await useAsyncData("posts", () =>
-  queryContent("cursos/como-ser-um-programador-melhor").limit(4).find(),
+  queryContent("como-ser-um-programador-melhor").limit(4).find(),
 );
 
 const quoteGenerate = (post: ParsedContent) => {

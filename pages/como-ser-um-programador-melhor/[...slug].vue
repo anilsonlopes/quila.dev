@@ -5,7 +5,7 @@ const slug =
     ? route.params.slug
     : route.params.slug.join("/");
 
-const path = `/cursos/como-ser-um-programador-melhor/${slug}`;
+const path = `como-ser-um-programador-melhor/${slug}`;
 </script>
 
 <template>

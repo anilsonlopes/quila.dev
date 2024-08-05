@@ -10,6 +10,6 @@ defineOgImage({
 
 <template>
   <div class="prose pb-10">
-    <content-doc path="/cursos/como-ser-um-programador-melhor" />
+    <content-doc path="/como-ser-um-programador-melhor" />
   </div>
 </template>
