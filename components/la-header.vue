@@ -20,7 +20,7 @@ onClickOutside(mobileMenuElement, () => {
 <template>
   <header>
     <nav
-      class="mx-auto flex w-full max-w-6xl items-center justify-between p-6 md:px-8"
+      class="mx-auto flex max-w-[1440px] items-center justify-between px-10 py-5"
       aria-label="Global"
     >
       <div class="flex w-full justify-between md:w-auto">
@@ -43,7 +43,7 @@ onClickOutside(mobileMenuElement, () => {
           v-for="link in navigation"
           :key="link.href"
           :to="link.href"
-          class="group relative block text-sm font-semibold leading-6 text-slate-100 hover:text-slate-400"
+          class="group relative block text-sm leading-6 text-slate-100 hover:text-slate-400"
         >
           {{ link.name }}
           <span
@@ -62,7 +62,7 @@ onClickOutside(mobileMenuElement, () => {
           v-for="link in navigation"
           :key="link.href"
           :to="link.href"
-          class="link flex items-center space-x-3 px-5 py-2 text-sm font-semibold leading-6 text-slate-700 hover:bg-blue-600 hover:text-white"
+          class="link flex items-center space-x-3 px-5 py-2 text-sm leading-6 text-slate-700 hover:bg-blue-600 hover:text-white"
         >
           <Icon
             name="solar:emoji-funny-circle-outline"
