@@ -5,23 +5,25 @@ useHead({
   title: "Acessível, escalável e autossustentável",
 });
 
-const { data: posts } = await useAsyncData("posts", () =>
-  queryContent("como-ser-um-programador-melhor").limit(4).find(),
+const { data: postsAll } = await useAsyncData("posts", () =>
+  queryContent("como-ser-um-programador-melhor").find(),
 );
+
+const posts = computed(() => {
+  const randomized = postsAll.value?.sort(() => Math.random() * 2 - 1);
+  return randomized?.slice(0, 4);
+});
 
 const quoteGenerate = (post: ParsedContent) => {
   if (!post.body) {
     return "ERROR 0xE4080A ***CRITICAL FAILURE*** [POST BODY MISSING]";
   }
-
-  const maxChildren = post.body.children.length;
-  const randomChild = Math.floor(Math.random() * maxChildren);
-
-  if (!post.body.children[randomChild].children) {
+ 
+  if (!post.body.children[1].children) {
     return "ERROR 0xFE9900 ***CRITICAL FAILURE*** [POST CONTENT MISSING]";
   }
 
-  const firstChildOfChild = post.body.children[randomChild].children[0];
+  const firstChildOfChild = post.body.children[1].children[0];
 
   return firstChildOfChild.value;
 };
