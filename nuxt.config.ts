@@ -9,6 +9,7 @@ export default defineNuxtConfig({
       mode: "out-in",
     },
   },
+
   modules: [
     "@nuxt/content",
     "nuxt-gtag",
@@ -19,10 +20,13 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/seo",
   ],
+
   devtools: { enabled: true },
+
   gtag: {
     id: "G-N4V4MBDWX9",
   },
+
   googleFonts: {
     families: {
       "Racing Sans One": [400],
@@ -32,6 +36,7 @@ export default defineNuxtConfig({
     download: true,
     inject: true,
   },
+
   anime: {
     composables: true,
   },
@@ -41,4 +46,6 @@ export default defineNuxtConfig({
     name: "Quila",
     description: "Acessível, escalável e autossustentável.",
   },
+
+  compatibilityDate: "2024-08-08",
 });

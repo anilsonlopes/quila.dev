@@ -3,7 +3,7 @@
     <la-header />
     <div class="mx-auto max-w-[1440px] px-10">
       <slot />
+      <la-footer />
     </div>
-    <footer class="py-10"></footer>
   </div>
 </template>
