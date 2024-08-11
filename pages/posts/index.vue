@@ -11,7 +11,7 @@ defineOgImage({
 </script>
 
 <template>
-  <div>
+  <div class="container mx-auto">
     <h1 class="text-4xl font-bold">Posts</h1>
     <h3 class="mt-1 text-lg text-gray-600">Diretório de publicações.</h3>
     <ContentQuery path="/posts" :limit="3">
