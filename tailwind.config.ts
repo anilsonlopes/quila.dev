@@ -5,6 +5,9 @@ export default <Partial<Config>>{
   content: ["pages/**/*.vue"],
   plugins: [require("@tailwindcss/typography")],
   theme: {
+    container: {
+      padding: "2rem",
+    },
     fontFamily: {
       sans: ["Roboto", ...defaultTheme.fontFamily.sans],
     },
