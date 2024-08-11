@@ -9,7 +9,9 @@ defineOgImage({
 </script>
 
 <template>
-  <div class="prose pb-10">
-    <content-doc path="/como-ser-um-programador-melhor" />
+  <div class="container mx-auto">
+    <div class="prose prose-blue prose-invert pb-10">
+      <content-doc path="/como-ser-um-programador-melhor" />
+    </div>
   </div>
 </template>

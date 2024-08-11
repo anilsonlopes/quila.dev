@@ -1,9 +1,9 @@
 <template>
-  <div class="flex min-h-screen flex-col bg-black text-gray-100">
+  <div class="flex min-h-screen flex-col bg-black text-neutral-100">
     <la-header />
-    <div class="mx-auto max-w-[1440px] px-10">
+    <div>
       <slot />
-      <la-footer />
     </div>
+    <la-footer />
   </div>
 </template>

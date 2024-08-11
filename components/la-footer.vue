@@ -1,6 +1,6 @@
 <template>
   <footer class="py-20">
-    <div class="flex justify-between">
+    <div class="container mx-auto flex justify-between">
       <div>
         <div class="text-xl font-light">Anilson Lopes</div>
         <ul class="mt-3 flex gap-6">

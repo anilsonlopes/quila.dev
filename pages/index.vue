@@ -18,7 +18,7 @@ const quoteGenerate = (post: ParsedContent) => {
   if (!post.body) {
     return "ERROR 0xE4080A ***CRITICAL FAILURE*** [POST BODY MISSING]";
   }
- 
+
   if (!post.body.children[1].children) {
     return "ERROR 0xFE9900 ***CRITICAL FAILURE*** [POST CONTENT MISSING]";
   }
@@ -33,13 +33,13 @@ const postPlaceholder =
 </script>
 
 <template>
-  <div class="grid grid-cols-12 gap-6 lg:gap-12">
+  <div class="container mx-auto grid grid-cols-12 gap-6 py-5 lg:gap-12">
     <div class="col-span-12 grid grid-cols-12 gap-4 lg:col-span-8 lg:gap-10">
       <div class="col-span-12 lg:col-span-6 lg:pr-10">
-        <h1 class="text-3xl font-thin text-white lg:text-7xl">
+        <h1 class="text-3xl font-thin text-neutral-100 lg:text-7xl">
           Cúrriculo disfarçado de portfólio para dev web sem diploma.
         </h1>
-        <p class="mt-10 break-words text-sm italic text-gray-300">
+        <p class="mt-10 break-words text-sm italic text-neutral-300">
           Conheça a auto biografia de Anilson Lopes, desenvolvedor web que
           cresceu no Miramar, zona norte da capital Alagoana. Atualmente ganha a
           vida como engenheiro front-end e alterna entre botar banca de designer

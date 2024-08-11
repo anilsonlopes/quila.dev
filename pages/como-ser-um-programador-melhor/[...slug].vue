@@ -9,11 +9,11 @@ const path = `como-ser-um-programador-melhor/${slug}`;
 </script>
 
 <template>
-  <div>
+  <div class="container mx-auto">
     <div class="mb-10">
       <la-back fallback="/como-ser-um-programador-melhor" />
     </div>
-    <div class="prose pb-10">
+    <div class="prose prose-blue prose-invert pb-10">
       <content-doc :path="path" />
     </div>
   </div>

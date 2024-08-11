@@ -20,7 +20,7 @@ onClickOutside(mobileMenuElement, () => {
 <template>
   <header>
     <nav
-      class="mx-auto flex max-w-[1440px] items-center justify-between px-10 py-5"
+      class="container mx-auto flex items-center justify-between py-5"
       aria-label="Global"
     >
       <div class="flex w-full justify-between md:w-auto">
