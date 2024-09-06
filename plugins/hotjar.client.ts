@@ -3,5 +3,7 @@ import Hotjar from "@hotjar/browser";
 export default defineNuxtPlugin((nuxtApp) => {
   const siteId = 5126387;
   const hotjarVersion = 6;
-  Hotjar.init(siteId, hotjarVersion);
+  Hotjar.init(siteId, hotjarVersion, {
+    debug: process.env.NODE_ENV === "development",
+  });
 });
