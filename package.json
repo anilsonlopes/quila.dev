@@ -23,6 +23,7 @@
     "prettier-plugin-tailwindcss": "0.6.2"
   },
   "dependencies": {
+    "@hotjar/browser": "^1.0.9",
     "@supabase/supabase-js": "^2.39.3",
     "@vercel/speed-insights": "1.0.11",
     "@vueuse/core": "^10.7.2",
