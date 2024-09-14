@@ -19,7 +19,7 @@
   "window.title": "${rootName}",
   "workbench.editor.enablePreview": false,
   "workbench.editor.revealIfOpen": true,
-  "workbench.editor.showTabs": "single",
+  "workbench.editor.showTabs": "multiple",
   "workbench.iconTheme": null,
   "workbench.list.horizontalScrolling": true,
   "workbench.startupEditor": "none",
