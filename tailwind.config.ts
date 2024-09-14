@@ -9,12 +9,7 @@ export default <Partial<Config>>{
       padding: "2rem",
     },
     fontFamily: {
-      sans: ["Roboto", ...defaultTheme.fontFamily.sans],
-    },
-    extend: {
-      fontFamily: {
-        racing: ["Racing Sans One", ...defaultTheme.fontFamily.sans],
-      },
+      sans: ["Inter", ...defaultTheme.fontFamily.sans],
     },
   },
 };
