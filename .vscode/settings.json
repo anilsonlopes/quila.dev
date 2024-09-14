@@ -13,6 +13,7 @@
   "editor.renderWhitespace": "none",
   "editor.scrollbar.horizontalScrollbarSize": 10,
   "editor.scrollbar.verticalScrollbarSize": 10,
+  "editor.stickyScroll.enabled": false,
   "explorer.compactFolders": false,
   "explorer.decorations.badges": false,
   "window.autoDetectColorScheme": true,
