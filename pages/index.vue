@@ -78,7 +78,7 @@ const postPlaceholder =
           <nuxt-link :to="post._path" class="block">
             <div class="flex items-center space-x-5">
               <img
-                class="h-[150px] w-[150px] flex-none object-cover"
+                class="h-[135px] w-[135px] flex-none object-cover"
                 :src="post.image || postPlaceholder"
               />
               <div class="col-span-2 space-y-4">
