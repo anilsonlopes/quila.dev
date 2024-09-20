@@ -4,6 +4,7 @@ import defaultTheme from "tailwindcss/defaultTheme";
 export default <Partial<Config>>{
   content: ["pages/**/*.vue"],
   plugins: [require("@tailwindcss/typography")],
+  darkMode: "selector",
   theme: {
     container: {
       padding: "2rem",

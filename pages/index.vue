@@ -33,25 +33,25 @@ const postPlaceholder =
 </script>
 
 <template>
-  <div class="container mx-auto grid grid-cols-12 gap-6 py-5 lg:gap-12">
+  <div class="container mx-auto grid grid-cols-12 gap-6 py-10 lg:gap-12">
     <div class="col-span-12 grid grid-cols-12 gap-4 xl:col-span-8 xl:gap-10">
       <div
         class="col-span-12 flex flex-col justify-between space-y-5 lg:col-span-6 lg:pr-10"
       >
         <h1
-          class="text-3xl font-thin text-neutral-100 xl:text-5xl xl:leading-tight 2xl:text-7xl"
+          class="text-3xl font-thin xl:text-5xl xl:leading-tight 2xl:text-7xl"
         >
           Cúrriculo disfarçado de portfólio para dev web sem diploma.
         </h1>
         <div>
-          <p class="text-sm italic text-neutral-300 lg:text-base">
+          <p class="text-sm italic lg:text-base dark:opacity-70">
             Conheça a vida e obra de Anilson Lopes, engenheiro frontend que
             cresceu no Miramar, o pico da neblina na zona norte da capital
             Alagoana. Atualmente ganha a vida como Lead Front-end Engineer e
             alterna as habilidades entre designer ui-ux e beatmaker.
           </p>
           <ul
-            class="mt-10 flex items-center space-x-10 divide-x divide-dashed divide-slate-700 whitespace-nowrap text-sm font-black"
+            class="mt-10 flex items-center space-x-10 divide-x divide-dashed divide-neutral-400 whitespace-nowrap text-sm font-black dark:divide-neutral-700"
           >
             <li>
               <div class="font-light">Maceió</div>

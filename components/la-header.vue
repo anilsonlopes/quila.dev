@@ -1,7 +1,17 @@
 <script setup lang="ts">
 import { onClickOutside } from "@vueuse/core";
+import { useDark, useToggle } from "@vueuse/core";
+
+const route = useRoute();
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
 
 const navigation = [
+  {
+    name: "Início",
+    href: "/",
+  },
   {
     name: "Como ser um programador melhor",
     href: "/como-ser-um-programador-melhor",
@@ -14,84 +24,89 @@ const mobileMenuElement = ref(null);
 
 onClickOutside(mobileMenuElement, () => {
   mobileMenuOpen.value = false;
+  enablePageOverflow();
 });
+
+const enablePageOverflow = () => {
+  document.body.style.overflow = "auto";
+};
+
+const disablePageOverflow = () => {
+  document.body.style.overflow = "hidden";
+};
+
+watch(mobileMenuOpen, (isOpen) => {
+  if (isOpen) {
+    disablePageOverflow();
+  } else {
+    enablePageOverflow();
+  }
+});
+
+watch(
+  () => route.fullPath,
+  () => {
+    enablePageOverflow();
+    mobileMenuOpen.value = false;
+  },
+);
 </script>
 
 <template>
   <header>
     <nav
-      class="container mx-auto flex items-center justify-between py-5"
+      class="container mx-auto border-b border-neutral-400 py-5 dark:border-neutral-800"
       aria-label="Global"
     >
-      <div class="flex w-full justify-between md:w-auto">
-        <button
-          type="button"
-          class="md:hidden"
-          @click="mobileMenuOpen = !mobileMenuOpen"
-        >
+      <div class="flex w-full justify-between">
+        <button type="button" @click="toggleDark(!isDark)">
           <Icon
-            name="solar:hamburger-menu-linear"
-            class="text-2xl text-gray-700"
+            :name="isDark ? 'solar:sun-2-linear' : 'solar:moon-linear'"
+            class="text-2xl"
           />
         </button>
         <nuxt-link to="/">
           <la-quila />
         </nuxt-link>
+        <button type="button" @click="mobileMenuOpen = !mobileMenuOpen">
+          <Icon name="solar:hamburger-menu-linear" class="text-2xl" />
+        </button>
       </div>
-      <div class="mt-5 hidden md:mt-0 md:flex md:gap-x-12">
-        <nuxt-link
-          v-for="link in navigation"
-          :key="link.href"
-          :to="link.href"
-          class="group relative block text-sm leading-6 text-slate-100 hover:text-slate-400"
+      <div v-show="mobileMenuOpen">
+        <div
+          class="fixed inset-0 z-50 overflow-y-auto bg-neutral-100 p-5 dark:bg-neutral-900"
         >
-          {{ link.name }}
-          <span
-            class="absolute -bottom-3 left-0 h-1 w-full origin-left scale-x-0 transform border-t-2 border-red-600 transition-transform duration-100 ease-in group-hover:scale-x-100"
-          ></span>
-        </nuxt-link>
+          <ul class="space-y-5">
+            <li
+              class="flex items-center justify-between text-sm uppercase dark:text-neutral-400"
+            >
+              <div>Navegação</div>
+              <button type="button" @click="mobileMenuOpen = !mobileMenuOpen">
+                <Icon
+                  name="vaadin:close"
+                  class="text-2xl dark:text-neutral-100"
+                />
+              </button>
+            </li>
+            <li v-for="link in navigation" :key="link.href">
+              <nuxt-link
+                :to="link.href"
+                class="link border-b border-transparent transition-colors hover:border-red-600 dark:text-neutral-200"
+              >
+                <span>
+                  {{ link.name }}
+                </span>
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <Transition name="link">
-      <div
-        v-show="mobileMenuOpen"
-        class="absolute z-10 w-full transform bg-gray-100 shadow-2xl transition-transform md:hidden"
-        ref="mobileMenuElement"
-      >
-        <nuxt-link
-          v-for="link in navigation"
-          :key="link.href"
-          :to="link.href"
-          class="link flex items-center space-x-3 px-5 py-2 text-sm leading-6 text-slate-700 hover:bg-blue-600 hover:text-white"
-        >
-          <Icon
-            name="solar:emoji-funny-circle-outline"
-            class="link-icon text-xl text-red-600"
-          />
-          <span>
-            {{ link.name }}
-          </span>
-        </nuxt-link>
-      </div>
-    </Transition>
   </header>
 </template>
 
 <style scoped lang="postcss">
-.link:not(.router-link-exact-active) .link-icon {
-  @apply hidden;
-}
-
-.link-enter-active,
-.link-leave-active {
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
-  transition-property: transform, opacity;
-  @apply -translate-x-full;
-}
-
-.link-enter-from,
-.link-leave-to {
-  @apply opacity-0;
+.link.router-link-exact-active {
+  @apply border-red-600;
 }
 </style>

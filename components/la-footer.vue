@@ -1,12 +1,16 @@
 <template>
-  <footer class="py-20">
-    <div class="container mx-auto flex justify-between">
+  <footer
+    class="bg-black py-20 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900"
+  >
+    <div
+      class="container mx-auto flex flex-col items-center justify-center space-y-5"
+    >
       <ul class="flex gap-6">
         <li>
           <nuxt-link
             to="https://linkedin.com/in/anilsonlopes"
             target="_blank"
-            class="text-gray-300 transition hover:opacity-75"
+            class="transition hover:opacity-60"
           >
             <span class="sr-only">LinkedIn</span>
 
@@ -38,7 +42,7 @@
           <nuxt-link
             to="https://instagram.com/quilamcz"
             target="_blank"
-            class="text-gray-300 transition hover:opacity-75"
+            class="transition hover:opacity-60"
           >
             <span class="sr-only">Instagram</span>
 
@@ -61,7 +65,7 @@
           <nuxt-link
             to="https://github.com/anilsonlopes"
             target="_blank"
-            class="text-gray-300 transition hover:opacity-75"
+            class="transition hover:opacity-60"
           >
             <span class="sr-only">GitHub</span>
 
@@ -84,7 +88,7 @@
           <nuxt-link
             to="https://dribbble.com/quila"
             target="_blank"
-            class="text-gray-300 transition hover:opacity-75"
+            class="transition hover:opacity-60"
           >
             <span class="sr-only">Dribbble</span>
 
@@ -103,15 +107,7 @@
           </nuxt-link>
         </li>
       </ul>
-      <la-papapa />
+      <div class="opacity-60">&copy; {{ new Date().getFullYear() }} QUILA</div>
     </div>
   </footer>
 </template>
-
-<script lang="ts" setup>
-const countPapapa = ref(1);
-
-const incrementPapapa = () => {
-  countPapapa.value++;
-};
-</script>
