@@ -30,6 +30,8 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Inter: true,
+      "Space Grotesk": true,
+      "Space Mono": true,
     },
     base64: true,
     download: true,

@@ -38,20 +38,18 @@ const postPlaceholder =
       <div
         class="col-span-12 flex flex-col justify-between space-y-5 lg:col-span-6 lg:pr-10"
       >
-        <h1
-          class="text-3xl font-thin xl:text-5xl xl:leading-tight 2xl:text-7xl"
-        >
+        <h1 class="font-serif text-3xl xl:text-5xl 2xl:text-7xl">
           Cúrriculo disfarçado de portfólio para dev web sem diploma.
         </h1>
         <div>
-          <p class="text-sm italic lg:text-base dark:opacity-70">
+          <p class="text-sm lg:text-base dark:opacity-70">
             Conheça a vida e obra de Anilson Lopes, engenheiro frontend que
             cresceu no Miramar, o pico da neblina na zona norte da capital
             Alagoana. Atualmente ganha a vida como Lead Front-end Engineer e
             alterna as habilidades entre designer ui-ux e beatmaker.
           </p>
           <ul
-            class="mt-10 flex items-center space-x-10 divide-x divide-dashed divide-neutral-400 whitespace-nowrap text-sm font-black dark:divide-neutral-700"
+            class="font-mono mt-10 flex items-center space-x-10 divide-x divide-dashed divide-neutral-400 whitespace-nowrap text-sm font-black dark:divide-neutral-700"
           >
             <li>
               <div class="font-light">Maceió</div>
@@ -84,16 +82,14 @@ const postPlaceholder =
                 :src="post.image || postPlaceholder"
               />
               <div class="col-span-2 space-y-4">
-                <div class="text-xs">Como ser um programador melhor</div>
-                <div class="line-clamp-2 lg:text-xl">
+                <div class="text-xs">
+                  {{ post.title }}
+                </div>
+                <div class="line-clamp-2 text-lg lg:text-xl">
                   "{{ quoteGenerate(post) }}
                 </div>
-                <div class="flex space-x-3 text-xs">
-                  <div>
-                    {{ post.title }}
-                  </div>
-                  <div>|</div>
-                  <div>{{ post.body?.children.length }}min de leitura</div>
+                <div class="text-xs">
+                  {{ post.body?.children.length }}min de leitura
                 </div>
               </div>
             </div>

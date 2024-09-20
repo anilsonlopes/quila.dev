@@ -11,6 +11,8 @@ export default <Partial<Config>>{
     },
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      serif: ["Space Grotesk", ...defaultTheme.fontFamily.serif],
+      mono: ["Space Mono", ...defaultTheme.fontFamily.mono],
     },
   },
 };
