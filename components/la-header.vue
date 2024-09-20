@@ -55,7 +55,7 @@ watch(
 <template>
   <header>
     <nav
-      class="container mx-auto border-b border-neutral-400 py-5 dark:border-neutral-800"
+      class="container mx-auto border-b border-neutral-300 py-5 dark:border-neutral-800"
       aria-label="Global"
     >
       <div class="flex w-full justify-between">
