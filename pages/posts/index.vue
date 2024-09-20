@@ -11,7 +11,7 @@ defineOgImage({
 </script>
 
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto mt-10">
     <h1 class="text-4xl font-bold">Posts</h1>
     <h3 class="mt-1 text-lg text-gray-600">Diretório de publicações.</h3>
     <ContentQuery path="/posts" :limit="3">
@@ -31,10 +31,10 @@ defineOgImage({
                   />
                 </div>
                 <div>
-                  <div class="text-2xl text-neutral-100">
+                  <div class="text-2xl">
                     {{ post.title }}
                   </div>
-                  <div class="mt-3 max-w-lg text-neutral-400">
+                  <div class="mt-3 max-w-lg opacity-60">
                     <ContentRenderer :value="post.excerpt">
                       <ContentRendererMarkdown :value="post.excerpt" />
                     </ContentRenderer>

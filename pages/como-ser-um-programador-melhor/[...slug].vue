@@ -17,7 +17,7 @@ const path = `como-ser-um-programador-melhor/${slug}`;
         src="/vidz/sample-video.mp4"
         controls
       />
-      <div class="prose prose-blue prose-invert pb-10">
+      <div class="prose pb-10 dark:prose-invert">
         <content-doc :path="path" />
       </div>
     </div>
