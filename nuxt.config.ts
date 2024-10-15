@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     "@hypernym/nuxt-anime",
     "@vueuse/nuxt",
     "@nuxtjs/seo",
+    "nuxt-swiper"
   ],
 
   devtools: { enabled: true },
