@@ -1,4 +1,4 @@
-Este plano é um guia e pode ser adaptado de acordo com as suas necessidades e interesses. Como engenheiro frontend web poderá desenvolver suas habilidades de forma consistente e alcançar seus objetivos de carreira.
+Este plano é um guia e pode ser adaptado de acordo com as suas necessidades e interesses. Com ele você poderá desenvolver suas habilidades de forma consistente e alcançar seus objetivos de carreira.
 
 ## Perguntas para personalizar seu roadmap:
 
