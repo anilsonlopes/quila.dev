@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     "@hypernym/nuxt-anime",
     "@vueuse/nuxt",
     "@nuxtjs/seo",
-    "nuxt-swiper"
+    "nuxt-swiper",
   ],
 
   devtools: { enabled: true },
@@ -45,8 +45,9 @@ export default defineNuxtConfig({
 
   site: {
     url: "https://quila.dev",
-    name: "Quila",
-    description: "Acessível, escalável e autossustentável.",
+    name: "Anilson Lopes",
+    description:
+      "Atualmente ganha a vida como Lead Front-end Engineer e alterna as habilidades entre designer ui-ux e beatmaker.",
   },
 
   compatibilityDate: "2024-08-08",
