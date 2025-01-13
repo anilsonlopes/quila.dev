@@ -14,32 +14,32 @@
       </div>
       <div>
         <div class="font-semibold">Anilson Lopes</div>
-        <div>Engineering Leader and Front-end</div>
+        <div>Desenvolvedor Web</div>
       </div>
     </div>
     <p>
-      Engenheiro frontend que cresceu no Miramar,
+      Desenvolvedor web que cresceu no Miramar,
       <la-expand>o pico da neblina na zona norte da capital Alagoana</la-expand
       >. Atualmente ganha a vida como Lead Front-end Engineer e alterna as
-      habilidades entre designer ui-ux e beatmaker.
+      funções entre designer e programador.
     </p>
 
     <p>
-      Desde jovem, Anilson sempre foi fascinado por tecnologia e design. Ele
-      começou sua jornada no mundo da programação ainda na adolescência, criando
-      pequenos projetos e explorando diferentes linguagens de programação. Sua
-      paixão pelo desenvolvimento frontend o levou a se especializar na criação
-      de interfaces de usuário intuitivas e atraentes.
+      Desde jovem, fascinado por tecnologia e design. Comecei a jornada no mundo
+      da programação na adolescência, recriando jogos da época e explorando
+      diferentes linguagens de programação. Paixão pela engenharia no frontend,
+      me levando a se especializar na criação de interfaces de usuário
+      intuitivas e altamente moderna.
     </p>
 
     <p>
-      Ao longo dos anos, Anilson trabalhou em diversas empresas e startups, onde
-      adquiriu uma vasta experiência em desenvolvimento web e design. Sua
-      habilidade em <la-expand>combinar estética e funcionalidade</la-expand> o
-      tornou um profissional altamente respeitado na indústria. Além de
+      Ao longo dos anos, trabalhei em empresas e startups, onde adquiri uma
+      vasta experiência em desenvolvimento web, design e gestão de times. Minha
+      habilidade combinam <la-expand>estética e funcionalidade</la-expand>, o
+      que me torna um profissional altamente respeitado na indústria. Além de
       <la-expand
-        >seu trabalho como engenheiro frontend, Anilson também se dedica à
-        música, produzindo beats e explorando novas</la-expand
+        >meu trabalho como engenheiro frontend, também me dedico à música,
+        produzindo beats e explorando novas</la-expand
       >
       sonoridades.
     </p>
