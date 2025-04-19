@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="prose dark:prose-invert">
+  <div class="prose prose-invert">
     <ContentDoc :path="`/posts/${$route.params.slug}`" class="mt-10">
       <template v-slot="{ doc }">
         <article>
