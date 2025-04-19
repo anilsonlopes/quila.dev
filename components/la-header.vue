@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import { useDark, useToggle } from "@vueuse/core";
+import { useToggle } from "@vueuse/core";
 
 const route = useRoute();
-
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
 
 const navigation = [
   {
@@ -13,7 +10,7 @@ const navigation = [
   },
   {
     name: "Como ser um programador melhor",
-    href: "/jornada/como-ser-um-programador-melhor",
+    href: "/como-ser-um-programador-melhor",
   },
   {
     name: "Posts",
@@ -23,13 +20,15 @@ const navigation = [
 </script>
 
 <template>
-  <header class="bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200">
+  <header class="flex items-center justify-between py-5 text-neutral-200">
+    <la-quila class="whitespace-nowrap" />
+
     <nav class="flex items-center justify-end space-x-2" aria-label="Global">
       <nuxt-link
         v-for="link in navigation"
         :key="link.href"
         :to="link.href"
-        class="link block border-b border-transparent px-4 py-2 transition-colors"
+        class="inline-block border-b border-transparent px-4 py-2 text-sm opacity-75 transition-opacity hover:opacity-100"
       >
         <span>
           {{ link.name }}
@@ -38,9 +37,3 @@ const navigation = [
     </nav>
   </header>
 </template>
-
-<style scoped lang="postcss">
-.link.router-link-exact-active {
-  @apply border-red-600;
-}
-</style>

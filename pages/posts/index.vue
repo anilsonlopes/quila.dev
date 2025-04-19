@@ -6,11 +6,7 @@ const { data, status } = await useAsyncData("posts", () =>
 
 <template>
   <div class="space-y-5">
-    <la-page-title>Blog</la-page-title>
-    <p>
-      Não sou de escrever muito, mas quando escrevo, escrevo muito. Aqui você
-      encontra meus artigos, estudos e pesquisas.
-    </p>
+    <la-page-title>Posts</la-page-title>
     <ul class="space-y-3">
       <li v-for="post of data">
         <nuxt-link class="inline-block" :to="post._path">
@@ -18,7 +14,7 @@ const { data, status } = await useAsyncData("posts", () =>
             <div class="border-b border-neutral-400">
               {{ post.title }}
             </div>
-            <div class="bg-white px-2 py-1 text-xs dark:bg-neutral-800">
+            <div class="bg-neutral-800 px-2 py-1 text-xs">
               {{ readingTime(JSON.stringify(post.body)) }} mins de leitura
             </div>
           </div>

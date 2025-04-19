@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-2 border border-neutral-300 p-5 dark:border-neutral-700">
+  <div class="space-y-2 border border-neutral-700 p-5">
     <WorkItemTop>
       <template #place>{{ place }}</template>
       <template #date> {{ startDate }} - {{ endDate }} </template>
