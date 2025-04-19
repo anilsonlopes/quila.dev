@@ -1,11 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const route = useRoute();
+
+const currentPath =
+  typeof route.params.slug === "string"
+    ? route.params.slug
+    : route.params.slug.join("/");
+const contentPath = `/como-ser-um-programador-melhor/${currentPath}`;
+</script>
 
 <template>
   <div class="prose prose-invert">
-    <ContentDoc
-      :path="`/como-ser-um-programador-melhor/${$route.params.slug}`"
-      class="mt-10"
-    >
+    <ContentDoc :path="contentPath" class="mt-10">
       <template v-slot="{ doc }">
         <article>
           <h1>{{ doc.title }}</h1>
