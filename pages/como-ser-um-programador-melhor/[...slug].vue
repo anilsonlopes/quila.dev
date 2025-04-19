@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="prose dark:prose-invert">
+  <div class="prose prose-invert">
     <ContentDoc
       :path="`/como-ser-um-programador-melhor/${$route.params.slug}`"
       class="mt-10"

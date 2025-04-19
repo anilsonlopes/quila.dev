@@ -11,3 +11,37 @@ Tem realidade, tem provocação, tem evolução.
 
 Se você tá satisfeito sendo só mais um na multidão, é melhor parar por aqui.  
 Mas se você sente que dá pra ser **melhor do que ontem** — e quer ver até onde consegue chegar — então prepara a mochila.
+
+**Preliminares**
+
+- Importar-se com o código
+
+**Objetivação**
+
+- Evite o piloto automático
+- Não seja estúpido
+
+**Motivação**
+
+- Evitando a estagnação
+- Qual o desafio?
+- Encontre a motivação
+- Controlando a motivação
+
+**Responsabilidade**
+
+- Não se apresse
+
+**Rotina**
+
+- Bugs
+- Daily
+
+**Lidando com a complexidade**
+
+- Identificando a complexidade
+- Pessoas
+
+**Futuro**
+
+- Negócios
