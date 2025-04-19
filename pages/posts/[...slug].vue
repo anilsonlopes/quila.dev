@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="prose prose-invert">
+  <div
+    class="prose prose-invert prose-headings:no-underline prose-a:prose-headings:no-underline"
+  >
     <ContentDoc :path="`/posts/${$route.params.slug}`" class="mt-10">
       <template v-slot="{ doc }">
         <article>

@@ -9,7 +9,9 @@ const contentPath = `/como-ser-um-programador-melhor/${currentPath}`;
 </script>
 
 <template>
-  <div class="prose prose-invert">
+  <div
+    class="prose prose-invert prose-headings:no-underline prose-a:prose-headings:no-underline"
+  >
     <ContentDoc :path="contentPath" class="mt-10">
       <template v-slot="{ doc }">
         <article>
