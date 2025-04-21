@@ -10,8 +10,7 @@ jobs:
         with:
           urls: |
             https://quila.dev/
-            https://quila.dev/trabalho/
-            https://quila.dev/projetos/
+            https://quila.dev/como-ser-um-programador-melhor/
             https://quila.dev/posts/
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
